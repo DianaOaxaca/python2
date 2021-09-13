@@ -1,8 +1,5 @@
-##ejercicio1 Obtener cadena proteica de cualquiera de sus ORFs
-from os import makedev
+##ejercicio1 Obtener cadena proteica de cualquiera de sus ORFs y la de mayor longitud
 from Bio.Seq import Seq
-from Bio import SeqIO
-from Bio import SeqUtils
 from Bio.SeqUtils import nt_search, GC, molecular_weight
 secuencia2 = Seq("AGCCATGTAGCTAACTCAGGTTACATGGGGATGACCCCGCGACTTGGATTAGAGTCTCTTTTGGAATAAGCCTGAATGATCCGAGTAGCATCTCAG")
 orf = Seq("ATG")
