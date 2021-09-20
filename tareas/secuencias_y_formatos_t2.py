@@ -60,11 +60,11 @@ def resumen(file, genes):
         print("Country: ", gb_record.features[0].qualifiers['country'])
         for gene in genes:
             for i,feature in enumerate(gb_record.features):
-                feats_number = (i+2) 
-                if gb_record.features[feats_number-1].qualifiers['gene']== [gene]:
-                    print("Gene name: ", gb_record.features[feats_number-1].qualifiers['gene'])
-                    start = gb_record.features[feats_number-1].location.nofuzzy_start
-                    end = gb_record.features[feats_number-1].location.nofuzzy_end                    
+                feats_number = (i +1) 
+                if gb_record.features[feats_number].qualifiers['gene']== [gene]:
+                    print("Gene name: ", gb_record.features[feats_number].qualifiers['gene'])
+                    start = gb_record.features[feats_number].location.nofuzzy_start
+                    end = gb_record.features[feats_number].location.nofuzzy_end                    
                     dna = gb_record.seq[start:end]
                     rna = dna.transcribe()
                     dna_prot = gb_record.seq[start+2:end]
