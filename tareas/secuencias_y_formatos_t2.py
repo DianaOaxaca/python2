@@ -70,7 +70,7 @@ def resumen(file, genes):
                     dna_prot = gb_record.seq[start+2:end]
                     protein = dna_prot.translate()
                     print("The first 15 DNA nucleotides are: ", dna[0:15])
-                    print("The first 15 DNA nucleotides are: ", rna[0:15])
-                    print("The first 15 DNA nucleotides are: ", protein[0:15])
+                    print("The first 15 RNA nucleotides are: ", rna[0:15])
+                    print("The first 15 protein amino acids are: ", protein[0:15])
                     break
 resumen(input_file, gene_list)
