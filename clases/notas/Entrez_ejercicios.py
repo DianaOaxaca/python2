@@ -10,4 +10,4 @@ for field in record["DbInfo"]["FieldList"]:
     if field["Name"] == "ORGN":
         print(i, field["Name"], field["Description"])
 #acceder a la posici[on 4 que es organismo]
-print(record["DbInfor"]["FieldList"][3["Description"]])
+print(record["DbInfor"]["FieldList"][3]["Description"])
