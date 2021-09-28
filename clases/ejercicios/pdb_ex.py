@@ -27,10 +27,16 @@ for model in struc:
                     cys.append(residue)
                     cys1 = cys[0]
                     for atom in cys1:
-                        #print(atom)
-                        #if atom == residue['SG']:
                         if atom.element == 'S':
                             print(atom.element, atom.id)
+
+                    #Despues de la linea 27 esto se hizo en clase aunque finalmente es lo mismo que yo hab[ia hecho
+                    #print(len(cys))
+                    #for atom in cys[0]:
+                        #print(atom.element, atom.id)
+
+
+#SG es nuestro elemento S        
 
 #Ejercicio 4. Calcular la distancia de todos los atomosS patra encontra los que estan cerca
 #Calc la dist de los atoms S de las cisteinas de la lista cys_A, guardar los de distancia menor a 8.0 Aæ
@@ -47,6 +53,10 @@ for model in struc:
                         if atom.element == 'S':
                             for cyst1 in cys_A:
                                 for cyst2 in cys_A:
-                                    dist = cyst1['id_elemento_S'] - cyst2['id_elemento_S'] 
-                                    if dist < 8.0:
-                                        pares.append((cyst1, cyst2))
+                                    if not (cyst1 == cyst2):
+                                        if(cyst1['SG'] - cyst2['SG']) < 8:
+                                            # Coordenadas de los átomos
+                                            print(cyst1['SG'].coord, cyst2['SG'].coord)
+                                            # Pares de ID de los residuos
+                                            print(cyst1.id, cyst2.id)
+            
